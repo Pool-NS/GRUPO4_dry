@@ -1,16 +1,18 @@
-# This is a sample Python script.
+class Geometria:
+    def area_cuadrado(self, lado):
+        return self._area(lado, lado)
 
-# Press Mayús+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+    def area_rectangulo(self, ancho, alto):
+        return self._area(ancho, alto)
 
+    def perimetro_cuadrado(self, lado):
+        return self._perimetro(lado, lado)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+    def perimetro_rectangulo(self, ancho, alto):
+        return self._perimetro(ancho, alto)
 
+    def _area(self, dimension1, dimension2):
+        return dimension1 * dimension2
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    def _perimetro(self, dimension1, dimension2):
+        return 2 * (dimension1 + dimension2)
